@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Isai Morales" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SISEC V3</title>
+    <link rel="icon" type="image/png" href="imagenes/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-0">
+    <div class="container-fluid bg min-vh-100">
+      <div class="row">
+        <div class="col-lg-7 col-md-6 p-0">
+          <img class="imgLogin" src="imagenes/bglogin.jpg" alt="" />
+          <div class="plecaLogin">
+            <img class="logoPLecaLogin" src="imagenes/logo.png" alt="" />
+          </div>
+        </div>
+        <div
+          class="col-lg-5 col-md-6 d-flex contentForm align-items-center justify-content-center"
+        >
+          <form class="form p-4">
+            <div class="logo text-center logoSisec">
+              <img src="imagenes/sisec.svg" alt="" />
+            </div>
+            <div class="logo text-center logoSOC" style="display: none">
+              <img src="imagenes/logo.png" alt="" />
+            </div>
+            <p class="tituloLogin">Iniciar sesión</p>
+            <div class="inputLogin">
+              <div class="password-container">
+                <div class="password-container">
+                  <input
+                    placeholder="Usuario"
+                    type="email"
+                    class="form-control"
+                    id="usuario"
+                    aria-describedby="emailHelp"
+                  />
+                  <button type="button" class="buttonPass">
+                    <img
+                      class="iconoContraseña"
+                      src="imagenes/usuario.png"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="inputLogin mb-3">
+              <div class="password-container">
+                <input type="password" id="password" placeholder="Contraseña" />
+                <button type="button" class="buttonPass" id="togglePassword">
+                  <img
+                    class="iconoContraseña"
+                    src="imagenes/contra.png"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+          
+            <div class="text-center botonLogear primerSubmit mb-4">
+              <a
+                href="#"
+                class="btn btn-primary w-100 botonEnviar2"
+                id="redireccionSisec"
+                onclick="loguear(event)"
+              >
+                Ingresar
+              </a>
+            </div>
+
+            <div
+              class="text-center botonLogear  primerSubmit"
+              id="ingreseSOC"
+            >
+              <button type="submit" class="btn btn-primary w-100 botonEnviar">
+                Ingreso Inmobiliario
+              </button>
+            </div>
+            <div>
+              <a
+                href="#!"
+                data-bs-toggle="modal"
+                data-bs-target="#recuperarContraseña"
+              >
+                <p class="recuperarContraseña mt-4">¿Recuperar contraseña?</p>
+              </a>
+              <div id="componenteContraseña"></div>
+            </div>
+          </form>
+
+          <div class="copyLogin">
+            <p>
+              <span class="copy">
+                © 2025 SOC Líderes en Asesoría Financiera.</span
+              >
+              <span class="v4"> v4 </span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" ></script>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
+
+TICKET / INFRA , SOLICITUD , SERVIDORES , DOMINIO 
+Nuevo dominio para servidor de pruebas

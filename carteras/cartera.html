@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Isai Morales" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SISEC V3</title>
+    <link rel="icon" type="image/png" href="../imagenes/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/sidenav.css" />
+  </head>
+  <body id="body-pd">
+    <header class="header" id="header">
+      <div class="container-fluid">
+        <div id="componenteHeader"></div>
+      </div>
+    </header>
+    <!--Componentes del header-->
+    <div>
+      <!--Prospectos-->
+      <div id="componenteProspectos"></div>
+      <!--Notificaciones-->
+      <div id="componenteToast"></div>
+      <!--Tareas-->
+      <div id="componenteTareas"></div>
+      <!--Ajustes-->
+      <div id="componenteAjustes"></div>
+    </div>
+
+    <div class="l-navbar" id="nav-bar">
+      <nav class="nav">
+        <div>
+          <a href="#" class="nav_logo">
+            <img class="iconoLogo" src="../imagenes/iconoLogo.png" alt="" />
+            <span class="nav_logo-name">
+              <img
+                class="logoSistema"
+                src="../imagenes/logoSistema.png"
+                alt=""
+              />
+            </span>
+          </a>
+          <!--Menu componente-->
+          <div id="menu"></div>
+          <!--Menu componente-->
+        </div>
+      </nav>
+    </div>
+    <!--Container Main start-->
+    <div class="">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="contentTable">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="tituloContent mb-3">Personas Morales</p>
+              </div>
+              <div class="col-md-6">
+                <div class="btnFacturar">
+                  <button
+                    type="button"
+                    class="btn btn-primary botonAgregar"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalNuevaFactura"
+                  >
+                    Nueva Persona Fisica
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal / agregar - facutra -->
+            <div
+              class="modal fade"
+              id="modalNuevaFactura"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+            >
+              <div class="modal-dialog modalFull modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header headerAjustes">
+                    <h1 class="modal-title modal-title-ejecutivo fs-5">
+                      <strong>Agregar factura</strong>
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <img src="../imagenes/iconoCerrar.png" alt="" />
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div
+                      class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 formularioPerfil mt-2 contentBody"
+                    >
+                      <!-- Campos -->
+                      <div class="col">
+                        <label class="form-label">Fecha</label
+                        ><input type="text" id="column1" class="form-control" />
+                      </div>
+                      <div class="col">
+                        <label class="form-label"
+                          >Tipo de pedido relacionado</label
+                        ><input type="text" id="column2" class="form-control" />
+                      </div>
+                      <div class="colFull">
+                        <label class="form-label">Pedido relacionado</label>
+                        <textarea
+                          class="form-control"
+                          id="column3"
+                          rows="3"
+                        ></textarea>
+                      </div>
+                      <div class="col">
+                        <label class="form-label">Factura PDF</label
+                        ><input type="text" id="column2" class="form-control" />
+                      </div>
+                      <div class="col">
+                        <label class="form-label">Factura XML</label
+                        ><input type="text" id="column2" class="form-control" />
+                      </div>
+
+                      <!-- Botones -->
+                      <div class="mt-4">
+                        <button
+                          id="addRow"
+                          data-bs-dismiss="modal"
+                          class="btn botonAgregarFila mt-4"
+                        >
+                          Enviar a revisón a Jurídico
+                        </button>
+                        <button
+                          id="saveEdit"
+                          style="display: none"
+                          data-bs-dismiss="modal"
+                          class="btn botonAgregarFila"
+                        >
+                          Guardar cambios
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary cerrarModal"
+                      data-bs-dismiss="modal"
+                    >
+                      Cerrar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!---TABS / Ingresadas / En revisión / Aceptadas / Rechazadas-->
+
+            <ul class="nav nav-pills contentTabs" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#carteraHA"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-home"
+                  aria-selected="true"
+                >
+                  Hipotecario Activos
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#carteraHI"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  Hipotecario Inactivos
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#carteraPA"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  PYME Activos
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#carteraPI"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  PYME Inactivos
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#carteraBuscador"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  Buscador
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content tabsFacturas" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active colFull"
+                id="carteraHA"
+                role="tabpanel"
+                aria-labelledby="registroCompletoM-tab"
+              >
+                <table
+                  id="hipotecarioActivos"
+                  class="display table table-bordered mt-50"
+                  style="width: 100%"
+                ></table>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="carteraHI"
+                role="tabpanel"
+                aria-labelledby="prospecto-tab"
+              >
+                <table
+                  id="hipotecarioInactivos"
+                  class="display table table-bordered mt-50"
+                  style="width: 100%"
+                ></table>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="carteraPA"
+                role="tabpanel"
+                aria-labelledby="prospecto-tab"
+              >
+                <table
+                  id="pymeActivos"
+                  class="display table table-bordered mt-50"
+                  style="width: 100%"
+                ></table>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="carteraPI"
+                role="tabpanel"
+                aria-labelledby="prospecto-tab"
+              >
+                <table
+                  id="pymeInactivos"
+                  class="display table table-bordered mt-50"
+                  style="width: 100%"
+                ></table>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="carteraBuscador"
+                role="tabpanel"
+                aria-labelledby="prospecto-tab"
+              >
+                <div class="row row-cols-md-3 mb-3">
+                  <div class="colFull">
+                    <p class="tituloContent divider">Buscador</p>
+                  </div>
+                  <div class="col">
+                    <label class="form-label">Tipo de Cartera</label>
+                    <select class="form-select" id="ejecutivoTarea" required>
+                      <option value="">Selecciona una cartera</option>
+                      <option value="Ejecutivo1">Ejecutivo </option>
+                      <option value="Ejecutivo2">Organización</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label class="form-label">Nombre de Cartera</label
+                    ><input type="text" id="column1" class="form-control" />
+                  </div>
+
+                  <div class="col mt-3 center">
+                    <button
+                      id=""
+                      data-bs-dismiss=""
+                      class="btn botonDescargar mt-3"
+                    >
+                      Buscar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Container Main end-->
+    <!--Footer-->
+    <footer>
+      <img src="../imagenes/footer.png" alt="" />
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+    <script src="../js/main.js"></script>
+
+    <!--Componente tareas / Tabla / modal-->
+    <script src="../js/data/tareas.js"></script>
+    <!--Tablas facturas-->
+    <script src="../js/cartera/hipotecariosActivos.js"></script>
+    <script src="../js/cartera/hipotecarioInactivo.js"></script>
+    <script src="../js/cartera/pymeActivos.js"></script>
+    <script src="../js/cartera/pymeInactivos.js"></script>
+  </body>
+</html>

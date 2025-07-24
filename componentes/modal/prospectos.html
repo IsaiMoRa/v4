@@ -1,0 +1,585 @@
+<div
+  class="modal fade"
+  id="modalProspectos"
+  tabindex="-1"
+  aria-labelledby=""
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header headerAjustes">
+        <h1 class="modal-title fs-5" id="">
+          <strong>Prospectos</strong>
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          <img src="../imagenes/iconoCerrar.png" alt="" />
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <p class="tituloLogin text-left">
+            Selecciona el <strong> tipo de prospecto</strong>
+          </p>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card cardAjustes" id="cardHipotecario">
+              <div>
+                <img src="../imagenes/iconoHipotecario.png" alt="" />
+              </div>
+              <p>Hipotecario</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card cardAjustes" id="cardPymeFisico">
+              <div>
+                <img src="../imagenes/iconoPymeF.png" alt="" />
+              </div>
+              <p>PYME Fisico</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card cardAjustes" id="cardPymeMoral">
+              <div>
+                <img src="../imagenes/iconoPymeM.png" alt="" />
+              </div>
+              <p>PYME Moral</p>
+            </div>
+          </div>
+        </div>
+        <!--Hipotecario-->
+        <div
+          class="row mt-4 contenido-ajuste"
+          id="hipotecario"
+          style="display: none; opacity: 0"
+        >
+          <!--Formulario Hipotecario-->
+          <div class="tab-content" id="myTabContent">
+            
+            <div
+              class="tab-pane fade w-100 show active"
+              id="hipotecario"
+              role="tabpanel"
+              aria-labelledby="perfil-tab"
+            >
+              <p class="tituloContent">Nueva personal moral</p>
+              <div
+                class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 formularioPerfil mt-2"
+              >
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Nombre comercial</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Teléfono</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Correo electrónico</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Asesor</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Cliente referido</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">RFC</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Razón social</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Tipo de cartera</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+
+                <div class="colFull">
+                  <div class="mb-3">
+                    <button id="saveEdit" class="btn botonAgregarFila">
+                      Guardar cambios
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--PYME Fisico-->
+        <div
+          class="row mt-4 contenido-ajuste"
+          id="pymeFisico"
+          style="display: none; opacity: 0"
+        >
+          <div class="tab-content">
+            <p class="tituloContent">Nuevo acreditado</p>
+            <div
+              class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 formularioPerfil mt-2"
+            >
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Nombre(s)</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Primer apellido</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Segundo apellido</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Teléfono</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Correo Personal</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Asesor</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Tipo de cartera</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Activar Alertas</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Nacionalidad</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">¿Cuentas con CURP?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">CURP</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <!---->
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">RFC</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Edad</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Estado Civil</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Grado de estudios</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Código Postal</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Género</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Activad</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Ingresos</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Automóviles</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label"
+                    >Dependientes económicos</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Hijos</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Edad de los hijos</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="">
+                  <label for="" class="form-label">Croacreditado</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    aria-describedby=""
+                  />
+                </div>
+              </div>
+              <div class="colFull">
+                <div class="mb-3">
+                  <button id="saveEdit" class="btn botonAgregarFila">
+                    Guardar cambios
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--PYME Moral-->
+        <div
+          class="row mt-4 contenido-ajuste"
+          id="PymeMoral"
+          style="display: none; opacity: 0"
+        >
+          <div class="tab-content">
+            
+                <p class="tituloContent">Nueva persona moral</p>
+              <div
+                class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 formularioPerfil mt-2"
+              >
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Nombre comercial</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Teléfono</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Correo electrónico</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Asesor</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Cliente referido</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">RFC</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Razón social</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="">
+                    <label for="" class="form-label">Tipo de cartera</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                    />
+                  </div>
+                </div>
+    
+                <div class="colFull">
+                  <div class="mb-3">
+                    <button id="saveEdit" class="btn botonAgregarFila">
+                      Guardar cambios
+                    </button> 
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn cerrarModal btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

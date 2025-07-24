@@ -1,0 +1,177 @@
+<div class="row">
+  <!--TABS DE CERTIFICACIONES-->
+  <ul class="nav nav-tabs" id="myTabCertificaciones" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="certificaciones-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#tabCertificaciones"
+        type="button"
+        role="tab"
+        aria-controls="tabCertificaciones"
+        aria-selected="true"
+      >
+        Mis Certificaciones
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="profile-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#profile"
+        type="button"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
+      >
+        Certificaciones Asesores
+      </button>
+    </li>
+  </ul>
+  <!--TABS BODY DE CERTIFICACIONES / CERTIFICACIONES / CERTIFICACION ASESORES-->
+  <div class="tab-content" id="myTabContent">
+
+    <div
+      class="tab-pane fade show active"
+      id="tabCertificaciones"
+      role="tabpanel"
+      aria-labelledby="certificaciones-tab"
+    >
+        <p class="tituloContent divider">ABH</p>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3 formularioPerfil mt-2">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="" class="form-label">Fecha de certificación</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="" class="form-label">Vencimiento de certificación</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" />
+                </div>
+            </div>
+        </div>
+
+        <p class="tituloContent divider">SOC</p>
+        <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-3 formularioPerfil mt-2">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="" class="form-label">Fecha de certificación</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="" class="form-label">Vencimiento de certificación</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="" class="form-label">Categoría</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" />
+                </div>
+            </div>
+        </div>
+
+        <p class="tituloContent divider">MIDOT</p>
+        <p class="textoverdeSoc m-0">
+            Informar si tiene un familiar en primer y segundo grado (Padres, Hijos, Cónyuge, Hermanos, Nietos y Abuelos) laborando en Banorte. 
+        </p>
+        <p class="textoverdeSoc">
+            De ser el caso, compartir nombre y parentesco.
+        </p>
+        
+        <div class="colFull">
+            <div class="form-check form-switch mb-3">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">Tengo familiar</label>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-3 formularioPerfil mt-2 midot"> 
+            <div class="col">
+                <div class="mb-3">
+                    <label for="" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="" class="form-label">¿Parentesco?</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Selecciona</option>
+                        <option value="0">Madre / Padre</option>
+                        <option value="1">Hijo(a)</option>
+                        <option value="2">Cónyuge</option>
+                        <option value="3">Hermnano(a)</option>
+                        <option value="3">Nieto(a)</option>
+                        <option value="3">Abuelo(a)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col mt-5">
+                <button type="submit" form="" id="" class="btn botonAgregar">
+                    Guardar Respuesta
+                </button>
+            </div>
+        </div>
+        <p class="tituloContent divider">Pagar Prueba</p>
+        <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-3 formularioPerfil mt-2">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="" class="form-label">Costo de prueba</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="" class="form-label">Cantidad</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="" class="form-label">Total a pagar</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3 formularioPerfil mt-2">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="" class="form-label">Costo de prueba</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="" class="form-label">Cantidad</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" />
+                </div>
+            </div>
+        </div>
+
+    
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="profile"
+      role="tabpanel"
+      aria-labelledby="profile-tab"
+    ></div>
+    <div
+      class="tab-pane fade"
+      id="contact"
+      role="tabpanel"
+      aria-labelledby="contact-tab"
+    >
+      ...
+    </div>
+  </div>
+</div>
+

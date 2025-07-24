@@ -1,0 +1,121 @@
+<div
+class="modal fade"
+id="modalAjustes"
+tabindex="-1"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered modalFull">
+  <div class="modal-content">
+    <div class="modal-header headerAjustes">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">
+        <strong> Ajustes </strong>
+      </h1>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      >
+        <img src="../imagenes/iconoCerrar.png" alt="" />
+      </button>
+    </div>
+    <div class="modal-body">
+      <div>
+        <p class="tituloLogin text-left">
+          Usuario <strong> Rol de Usuario</strong>
+        </p>
+      </div>
+      <!--OPCIONES AJUSTES-->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+        <div class="col">
+          <div class="card cardAjustes" id="cardPerfil">
+            <div>
+              <img src="../imagenes/perfilAjuste.png" alt="" />
+            </div>
+            <p>Perfil</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card cardAjustes" id="cardPago">
+            <div>
+              <img src="../imagenes/iconoPago.png" alt="" />
+            </div>
+            <p>Pago Directo</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card cardAjustes" id="cardAlertas">
+            <div>
+              <img src="../imagenes/iconoAlerta.png" alt="" />
+            </div>
+            <p>Configuracion Alertas</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card cardAjustes" id="cardTutoriales">
+            <div>
+              <img src="../imagenes/iconoTutoriales.png" alt="" />
+            </div>
+            <p>Tutoriales</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card cardAjustes" id="cardCotizador">
+            <div>
+              <img src="../imagenes/cotizador.png" alt="" />
+            </div>
+            <p>Cotizador SOC</p>
+          </div>
+        </div>
+      </div>
+      <!--OPCIONES AJUSTES-->
+      
+      <!--PERFIL-->
+      <div id="componenteAjustesPerfil"></div>
+      
+      <!--Pago-->
+      <div
+        class="row mt-4 contenido-ajuste"
+        id="pago"
+        style="display: none; opacity: 0"
+      >
+        <p>Pago</p>
+      </div>
+      <!--Alertas-->
+      <div
+        class="row mt-4 contenido-ajuste"
+        id="alertas"
+        style="display: none; opacity: 0"
+      >
+        <p>Alertas</p>
+      </div>
+      <!--Tutoriales-->
+      <div
+        class="row mt-4 contenido-ajuste"
+        id="tutoriales"
+        style="display: none; opacity: 0"
+      >
+        <p>Tutoriales</p>
+      </div>
+      <!--Cotizadores-->
+      <div
+        class="row mt-4 contenido-ajuste"
+        id="cotizador"
+        style="display: none; opacity: 0"
+      >
+        <p>Cotizador</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn cerrarModal btn-secondary"
+        data-bs-dismiss="modal"
+      >
+        Cerrar
+      </button>
+    </div>
+  </div>
+</div>
+</div>

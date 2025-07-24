@@ -1,0 +1,140 @@
+<div
+  class="row mt-4 contenido-ajuste"
+  id="perfil"
+  style="display: none; opacity: 0"
+>
+  <!--TABS OPCION PERFIL / PERFIL / MICROSITIOS / TARJETA DIGITAL / CERTIFICACIONES / CAMBIO DE CONTRASEÑA-->
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="perfil-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#perfilAjuste"
+        type="button"
+        role="tab"
+        aria-controls="perfilAjuste"
+        aria-selected="true"
+      >
+        Perfil
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="micro-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#microAjuste"
+        type="button"
+        role="tab"
+        aria-controls="microAjuste"
+        aria-selected="false"
+      >
+        Micrositios
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="certificacion-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#tarjetaAjuste"
+        type="button"
+        role="tab"
+        aria-controls="tarjetaAjuste"
+        aria-selected="false"
+      >
+        Tarjeta Digital
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="certificacion-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#certificacionAjuste"
+        type="button"
+        role="tab"
+        aria-controls="certificacionAjuste"
+        aria-selected="false"
+      >
+        Certificaciones
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="certificacion-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#contraseñaAjuste"
+        type="button"
+        role="tab"
+        aria-controls="contraseñaAjuste"
+        aria-selected="false"
+      >
+        Cambio de contraseña
+      </button>
+    </li>
+  </ul>
+
+  <!--TABS BODY DE LA OPCIONES DE PERFIL-->
+
+  <div class="tab-content" id="myTabContent">
+    <!--BODY TAB PERFIL-->
+    <div
+      class="tab-pane fade w-100 show active"
+      id="perfilAjuste"
+      role="tabpanel"
+      aria-labelledby="perfil-tab"
+    >
+      <p class="tituloContent divider">Datos de Perfil</p>
+
+      <!--FORMULARIO DATOS DEL PERFIL -->
+      <div id="componenteDatosPerfil"></div>
+    </div>
+
+    <!--BODY TAB MICROSITIO-->
+    <div
+      class="tab-pane fade w-100"
+      id="microAjuste"
+      role="tabpanel"
+      aria-labelledby="micro-tab"
+    >
+      <p class="tituloContent">Micrositios</p>
+      <div id="componenteMicrositios"></div>
+    </div>
+
+    <!--BODY TAB TARJETA DIGITAL-->
+    <div
+      class="tab-pane fade"
+      id="tarjetaAjuste"
+      role="tabpanel"
+      aria-labelledby="tarjeta-tab"
+    >
+      <p class="tituloContent">Tarjeta Digital</p>
+      <div id="componenteTarjetaDigital"></div>
+    </div>
+
+    <!--CERTIFICACIONES-->
+    <div
+      class="tab-pane fade"
+      id="certificacionAjuste"
+      role="tabpanel"
+      aria-labelledby="certificacion-tab"
+    >
+      <p class="tituloContent">Certificaciones</p>
+      <div id="componenteCertificaciones"></div>
+    </div>
+
+    <!--BODY TAB CAMBIO DE CONTRASEÑA-->
+    <div
+      class="tab-pane fade"
+      id="contraseñaAjuste"
+      role="tabpanel"
+      aria-labelledby="contraseña-tab"
+    >
+      <p class="tituloContent">Cambio de contraseña</p>
+      <div id="componenteContrasena"></div>
+    </div>
+  </div>
+</div>

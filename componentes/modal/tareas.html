@@ -1,0 +1,59 @@
+<!-- Componente: Modal de Tareas -->
+<div
+  class="modal fade modal-tareas"
+  id="modalTareas"
+  tabindex="-1"
+  aria-labelledby="modalTareasLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modalFull ">
+    <div class="modal-content">
+      <div class="modal-header headerAjustes">
+        <h1 class="modal-title fs-5" id="modalTareasLabel">
+          <strong> Tareas </strong>
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          <img src="../imagenes/iconoCerrar.png" alt="Cerrar" />
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div>
+          <table
+            id="tablaTareas"
+            class="display table table-bordered"
+            style="width: 100%"
+          >
+            <thead>
+              <tr>
+                <th>Tarea</th>
+                <th>Cliente</th>
+                <th>Pedido</th>
+                <th>Asesor</th>
+                <th>Descripción</th>
+                <th>Fecha de vencimiento</th>
+                <th>Importancia</th>
+                <th>Avance</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn cerrarModal btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
