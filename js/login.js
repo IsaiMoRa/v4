@@ -24,6 +24,7 @@
   // USUARIO & CONTRASEÑA
   function loguear() {
     const usuarios = {
+      admin: "Pa$$w0rd",
       admin: "acceso",
       usuario1: "acceso2",
       // puedes agregar más usuarios aquí
